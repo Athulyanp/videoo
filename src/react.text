@@ -1,0 +1,173 @@
+REACT--------- js library(front end development)
+...............................................
+
+
+Basic commands
+
+  - to create project :npx create-react-app project-name
+  - to run project :npm start
+  - to install react material ui
+  - to build a project-- npm run build
+  - to install react bootstrap :
+  - to install react icons
+  - to install react router dom library  for navigation(redirect) using Browser-router tag
+
+
+Basic concept
+.............
+
+- reusable component based approach
+- Jsx :Javascript xml
+- fast
+
+Front end difference
+
+concept          angular              react                     vue
+....................................................................................
+
+1.developer      framework--google   library---meta/facebook   framework--opensource
+
+2.Language       typescript          javascript                javascript
+
+3.Dom            real dom            virtual dom               virtual dom
+
+4.datasharing    two data binding    one way data binding     two way data binding
+
+react          component based application
+
+components : create a js file having  a name start with capital letter.
+
+             two type of components
+                1. class based component---- stateful component
+
+                      it also has a default function for creating state
+                2.function based component--- stateless component 
+                       it means hasn't a default function for creating state
+
+react hook : hook is predefined function and name start with 'use' keyword
+
+   hook syntax:
+
+         use predefined function()
+         usestate() : it a function used to create a state.
+          state creation syntax :
+           
+                 const[statename,statevalueUpdationfunction]=useState()
+
+----props: props is used to share data between parent and child                 
+
+
+
+----state : state is used to store values .(also state has an advantage to transfer values) we can share state to child component.
+----conditional rendering: 
+
+
+
+Redirection in Rect :-
+
+
+1.   to install react router dom library  for navigation(redirect)  in index.js
+2.   replace entire application (App.js)using Browser-router tag
+     <BrouserRouter><App /></BrouserRouter>
+3.   to set path in one or more page  using <Routes></Routes> tag  then
+     set <route />in each page
+     <Route path='/' element={component tag} />
+4.   hook using navigation : useNavigate
+
+video auto play
+
+
+---------------------------------------------------------------------------------------------------------------
+
+API calling
+AXIOS Features: (create a single api call):used for creating common api call
+...............
+step:1.import axios
+     2. create a function for common api request
+        ( body used in post method.)
+
+
+
+--Make XMLHttpRequests from the browser
+--Make http requests from node.js
+--Supports the Promise API
+--Intercept request and response
+--Transform request and response data
+--Cancel requests
+--Automatic transforms for JSON data
+--🆕 Automatic data object serialization to multipart/form-data(used for uploading files or videos) and x-www-form-urlencoded body encodings
+--Client side support for protecting against XSRF
+
+
+Request Config:
+..............
+-----  These are the available config options for making requests. Only the url is required. Requests will default to GET if method is not specified.
+   --- `url` is the server URL that will be used for the request
+        url: '/user',
+
+   ---- `method` is the request method to be used when making the request
+        method: 'get', // default
+
+   ----`baseURL` will be prepended to `url` unless `url` is absolute.
+   ---- It can be convenient to set `baseURL` for an instance of axios to pass relative URLs
+   ---- to methods of that instance.
+   ---- baseURL: 'https://some-domain.com/api/',
+   ----  // `headers` are custom headers to be sent
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+          // `data` is the data to be sent as the request body
+  // Only applicable for request methods 'PUT', 'POST', 'DELETE , and 'PATCH'
+  // When no `transformRequest` is set, must be of one of the following types:
+  // - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams
+  // - Browser only: FormData, File, Blob
+  // - Node only: Stream, Buffer, FormData (form-data package)
+  data: {
+    firstName: 'Fred'
+  },
+
+... 3 dot means spread operator. 
+... toster :react toastify :it is used for alert setting
+use effect hook used for dom changes: it help for loading page automatically
+map method used for 
+props :share between parent to child
+
+Entire product structure
+
+parent ---->        app.js
+
+child------>header   landing   home  footer
+                                 .
+                                 .
+                                 .
+ child of home..............>add  view category    
+
+ data share between child to parent  , we use data trigering in add to view    
+ we pass console.log(response.data) into getallvideos or useEffect
+   steps: (for data share between child to parent)
+   if response status 200
+   1. first we store data into state of parent (home)  .it is called state lifting( data share between two siblings)
+prevent default: 
+
+
+
+
+create a wat h history in react project :-
+
+1.create a watch history tab in home page.
+2.create a new component for watch history.
+3.(id,card-name,link,date) create a watch history in db.json and value array.
+4.click on the video card.
+5.get watch history from json file to watch history component.
+
+
+uuid npm : it used for automatic id generation
+
+
+6/11/2023:  drag and drop in react :
+
+    --draggable onDragStart={e=>dragStarted(e,card?.id)}    
+
+
+    9/11/23:
+        props drilling: data sgaring between grand parent to yonger child      
+
+  
